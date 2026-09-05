@@ -1,0 +1,17 @@
+{
+  "name": "Muhammad Waqas | Backend & PWA Developer",
+  "short_name": "MW Portfolio",
+  "description": "Portfolio of Muhammad Waqas — Backend & PWA Developer specializing in Node.js, MongoDB, PostgreSQL, RESTful APIs and Progressive Web Apps.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#09090b",
+  "theme_color": "#8b5cf6",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
