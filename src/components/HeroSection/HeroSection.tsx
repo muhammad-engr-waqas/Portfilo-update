@@ -73,7 +73,7 @@ export const HeroSection = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            Backend & PWA Developer specializing in scalable RESTful APIs, Progressive Web Apps, and production-grade architectures using Node.js, Express.js, and MongoDB.
+            Backend & PWA Developer specializing in scalable RESTful APIs Progressive Web Apps and production grade architectures using Node.js Express.js and MongoDB.
           </motion.p>
 
           <motion.div 
@@ -171,11 +171,11 @@ export const HeroSection = () => {
                 <div className="grid grid-cols-2 gap-2.5 w-full text-left bg-muted/40 p-3 rounded-xl border border-border/50">
                   <div>
                     <span className="text-muted-foreground block text-[9px] uppercase tracking-widest font-bold">Specialty</span>
-                    <span className="font-bold text-foreground text-xs">Node, Mongo & SQL</span>
+                    <span className="font-bold text-foreground text-xs">Node Mongo & SQL</span>
                   </div>
                   <div>
                     <span className="text-muted-foreground block text-[9px] uppercase tracking-widest font-bold">Location</span>
-                    <span className="font-bold text-foreground text-xs">Vehari, Pakistan</span>
+                    <span className="font-bold text-foreground text-xs">Vehari Pakistan</span>
                   </div>
                   <div>
                     <span className="text-muted-foreground block text-[9px] uppercase tracking-widest font-bold">Experience</span>
