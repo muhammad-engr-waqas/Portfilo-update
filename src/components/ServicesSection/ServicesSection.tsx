@@ -6,22 +6,22 @@ const services = [
   {
     icon: Server,
     title: "Backend & RESTful APIs",
-    description: "Designing scalable RESTful APIs with Node.js, Express.js, and MongoDB, following clean MVC architecture, robust error handling, and query optimization.",
+    description: "Designing scalable RESTful APIs with Node.js Express.js and MongoDB following clean MVC architecture, robust error handling, and query optimization.",
   },
   {
     icon: Smartphone,
     title: "Progressive Web Apps (PWA)",
-    description: "Engineering fast, offline-capable, and installable Progressive Web Apps that deliver high performance and native app-like user experiences.",
+    description: "Engineering fast offline capable and installable Progressive Web Apps that deliver high performance and native app like user experiences.",
   },
   {
     icon: ShieldCheck,
     title: "Authentication & Security (RBAC)",
-    description: "Implementing secure JWT-based authentication, role-based access control (CEO, HR, Manager, Employee), custom middlewares, and protected endpoints.",
+    description: "Implementing secure JWT-based authentication, role-based access control (CEO, HR, Manager, Employee) custom middlewares and protected endpoints.",
   },
   {
     icon: Cloud,
     title: "Deployment & DevOps",
-    description: "Independent hosting management, custom domain & SSL setup, production deployments, and caching strategies (Redis) across AWS, Railway, Render, and Vercel.",
+    description: "Independent hosting management custom domain & SSL setup production deployments and caching strategies (Redis) across AWS, Railway, Render, and Vercel.",
   }
 ];
 

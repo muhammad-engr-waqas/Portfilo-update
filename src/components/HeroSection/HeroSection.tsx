@@ -45,26 +45,25 @@ export const HeroSection = () => {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="mb-4 text-center md:text-left"
           >
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-2">
-              Hi, I'm
-            </h1>
-            
-            {/* Light Theme: Clean Vibrant Gradient Text */}
-            <div className="block dark:hidden">
-              <span className="bg-gradient-to-r from-violet-600 via-sky-500 via-purple-600 to-indigo-600 bg-clip-text text-transparent font-extrabold text-[clamp(2.5rem,6vw,5rem)] leading-none tracking-tight block pb-2 select-none">
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-2 flex flex-wrap items-baseline gap-x-4 whitespace-nowrap">
+              <span>Hi, I'm</span>
+              <span className="sr-only"> Muhammad Waqas — Backend &amp; PWA Developer based in Vehari, Pakistan</span>
+
+              {/* Light Theme */}
+              <span className="block dark:hidden bg-gradient-to-r from-violet-600 via-sky-500 via-purple-600 to-indigo-600 bg-clip-text text-transparent font-extrabold text-[clamp(2.5rem,6vw,5rem)] leading-none tracking-tight select-none" aria-hidden="true">
                 Muhammad Waqas
               </span>
-            </div>
 
-            {/* Dark Theme: Rich Lightswind Aurora Text Effect */}
-            <div className="hidden dark:block">
-              <AuroraTextEffect
-                text="Muhammad Waqas"
-                fontSize="clamp(2.5rem, 6vw, 5rem)"
-                className="bg-transparent overflow-visible p-0 justify-start"
-                textClassName="bg-gradient-to-r from-cyan-400 via-purple-400 to-sky-300 bg-clip-text text-transparent pb-2 font-extrabold"
-              />
-            </div>
+              {/* Dark Theme */}
+              <span className="hidden dark:inline-flex" aria-hidden="true">
+                <AuroraTextEffect
+                  text="Muhammad Waqas"
+                  fontSize="clamp(2.5rem, 6vw, 5rem)"
+                  className="bg-transparent overflow-visible p-0 justify-start"
+                  textClassName="bg-gradient-to-r from-cyan-400 via-purple-400 to-sky-300 bg-clip-text text-transparent font-extrabold"
+                />
+              </span>
+            </h1>
           </motion.div>
 
           <motion.p 
@@ -73,7 +72,7 @@ export const HeroSection = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            Backend & PWA Developer specializing in scalable RESTful APIs Progressive Web Apps and production grade architectures using Node.js Express.js and MongoDB.
+           I build scalable backend systems and Progressive Web Apps using Node.js Express.js MongoDB MySQL PostgreSQL and Redis  and handle deployment on Vercel Render and AWS
           </motion.p>
 
           <motion.div 
@@ -102,18 +101,19 @@ export const HeroSection = () => {
             transition={{ delay: 0.8, duration: 0.8 }}
           >
             {[
-              { Icon: Github, href: "https://github.com/muhammad-engr-waqas", title: "GitHub" },
-              { Icon: Linkedin, href: "https://linkedin.com/in/engr-muhammad-waqas", title: "LinkedIn" },
-              { Icon: WhatsAppIcon, href: "https://wa.me/923069377493?text=Hello%20Muhammad%20Waqas!%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect.", title: "WhatsApp" },
-              { Icon: Mail, href: "mailto:mwaqasjutt17@gmail.com", title: "Email" },
-              { Icon: Globe, href: "https://engrmwaqas.online", title: "Portfolio" },
-            ].map(({ Icon, href, title }, i) => (
+              { Icon: Github, href: "https://github.com/muhammad-engr-waqas", title: "GitHub", ariaLabel: "Visit GitHub profile" },
+              { Icon: Linkedin, href: "https://linkedin.com/in/engr-muhammad-waqas", title: "LinkedIn", ariaLabel: "Visit LinkedIn profile" },
+              { Icon: WhatsAppIcon, href: "https://wa.me/923069377493?text=Hello%20Muhammad%20Waqas!%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect.", title: "WhatsApp", ariaLabel: "Contact via WhatsApp" },
+              { Icon: Mail, href: "mailto:mwaqasjutt17@gmail.com", title: "Email", ariaLabel: "Send an email" },
+              { Icon: Globe, href: "https://engrmwaqas.online", title: "Portfolio", ariaLabel: "Visit portfolio website" },
+            ].map(({ Icon, href, title, ariaLabel }, i) => (
               <a 
                 key={i} 
                 href={href} 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 title={title}
+                aria-label={ariaLabel}
                 className="text-muted-foreground hover:text-foreground transition-colors hover:-translate-y-1 transform duration-200"
               >
                 <Icon className="w-5 h-5" />
@@ -148,7 +148,7 @@ export const HeroSection = () => {
                 <div className="mt-1 relative w-28 h-28 rounded-full p-1 bg-gradient-to-tr from-cyan-400 via-primary to-purple-400 backdrop-blur-md shadow-2xl border border-white/50 overflow-hidden group">
                   <img 
                     src="/image-CCPdUrDP.jpeg" 
-                    alt="Muhammad Waqas" 
+                    alt="Muhammad Waqas - Backend and PWA Developer" 
                     className="w-full h-full object-cover rounded-full filter contrast-105"
                     loading="eager"
                   />
@@ -161,7 +161,7 @@ export const HeroSection = () => {
                 <div>
                   <h3 className="text-xl font-extrabold tracking-tight text-foreground">Muhammad Waqas</h3>
                   <div className="inline-flex items-center gap-1.5 mt-1 px-3 py-0.5 rounded-full bg-primary/10 border border-primary/30 text-primary text-xs font-semibold">
-                    <span>Backend & PWA Developer</span>
+                    <span>Backend-PWA Developer & DevOps</span>
                   </div>
                 </div>
 

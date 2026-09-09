@@ -54,7 +54,7 @@ export const ProjectsSection = () => {
           Selected <span className="text-gradient-primary">Works</span>
         </h2>
         <p className="text-muted-foreground text-center md:text-left max-w-2xl text-lg">
-          Production-grade systems, Progressive Web Apps, and scalable backend platforms I've engineered and deployed.
+          Production grade systems Progressive Web Apps and scalable backend platforms I've engineered and deployed.
         </p>
       </motion.div>
 
