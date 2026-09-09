@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import { pushToDataLayer } from "../../utils/gtm";
 
 export const ProjectsSection = () => {
   const projects = [
@@ -66,6 +67,7 @@ export const ProjectsSection = () => {
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => pushToDataLayer("cta_click", { cta_label: project.title, cta_location: "projects_section" })}
             className="group relative overflow-hidden rounded-[2rem] border border-foreground/10 bg-card/70 backdrop-blur-xl shadow-xl flex flex-col justify-between h-full hover:border-primary/40 hover:shadow-2xl transition-all duration-300"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}

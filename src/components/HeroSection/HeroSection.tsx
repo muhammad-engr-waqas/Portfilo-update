@@ -7,6 +7,7 @@ import { Badge } from "../lightswind/badge";
 import { HangingIdCard } from "../lightswind/HangingIdCard";
 import { AuroraTextEffect } from "../lightswind/aurora-text-effect";
 import { DotPattern } from "../lightswind/dot-pattern";
+import { pushToDataLayer } from "../../utils/gtm";
 
 export const HeroSection = () => {
   return (
@@ -81,12 +82,12 @@ export const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
-            <a href="#projects">
+            <a href="#projects" onClick={() => pushToDataLayer("cta_click", { cta_label: "View Work", cta_location: "hero_section" })}>
               <Button size="lg" className="rounded-full px-7 h-12 bg-primary text-primary-foreground font-semibold flex items-center gap-2 hover:bg-primary/90 transition-all shadow-[0_0_20px_rgba(139,92,246,0.3)] hover:shadow-[0_0_30px_rgba(139,92,246,0.5)] hover:-translate-y-1">
                 View Work <ArrowRight className="w-4 h-4" />
               </Button>
             </a>
-            <a href="#contact">
+            <a href="#contact" onClick={() => pushToDataLayer("cta_click", { cta_label: "Contact Me", cta_location: "hero_section" })}>
               <Button size="lg" variant="outline" className="rounded-full px-7 h-12 glass-panel text-foreground font-semibold flex items-center gap-2 hover:bg-foreground/10 transition-all hover:-translate-y-1 border-foreground/10">
                 Contact Me <Download className="w-4 h-4" />
               </Button>

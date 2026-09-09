@@ -4,8 +4,15 @@ import { WhatsAppIcon } from "../WhatsApp/WhatsAppIcon";
 import { Input } from "../lightswind/input";
 import { Textarea } from "../lightswind/textarea";
 import { Button } from "../lightswind/button";
+import { pushToDataLayer } from "../../utils/gtm";
 
 export const ContactSection = () => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    pushToDataLayer("contact_form_submit", {
+      form_name: "contact_us",
+    });
+  };
   return (
     <section id="contact" className="max-w-7xl mx-auto px-6 py-24">
       <motion.div
@@ -71,7 +78,7 @@ export const ContactSection = () => {
 
           {/* Form */}
           <div className="flex-1 glass-panel p-8 rounded-[2rem] border border-foreground/10 relative">
-            <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-5" onSubmit={handleSubmit}>
               <div>
                 <label className="block text-sm font-medium text-muted-foreground mb-1.5">Your Name</label>
                 <Input 

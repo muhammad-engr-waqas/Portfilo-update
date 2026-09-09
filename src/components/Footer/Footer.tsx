@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Github, Linkedin, Globe, Mail, ArrowUp } from "lucide-react";
 import { WhatsAppIcon } from "../WhatsApp/WhatsAppIcon";
 import { MorphingText } from "../lightswind/morphing-text";
+import { pushToDataLayer } from "../../utils/gtm";
 
 export const Footer = () => {
   const morphingTexts = [
@@ -15,6 +16,7 @@ export const Footer = () => {
 
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+    pushToDataLayer("cta_click", { cta_label: "Back to top", cta_location: "footer" });
   };
 
   const navLinks = [
